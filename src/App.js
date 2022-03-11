@@ -1,16 +1,18 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./Login.js";
+import Tasks from "./";
 
-import React, {Component} from 'react';
-import {Login} from './Login'
-
-class App extends Component{
-    render() {
-        return (
-            <main>
-                <Login/>
-            </main>
-
-        );
-    }
-
+function MainRouter() {
+    return (
+        <>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Login />} />
+                    <Route path="/tasks" element={<Tasks />} />
+                </Routes>
+            </Router>
+        </>
+    );
 }
-export default App;
+
+export default MainRouter;
