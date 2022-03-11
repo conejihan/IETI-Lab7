@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Login.js";
-import Tasks from "./";
+import Tasks from "./Tasks.js";
 
 function MainRouter() {
     return (
