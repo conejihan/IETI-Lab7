@@ -3,7 +3,8 @@ import Login from "./Login";
 import Tasks from "./Tasks";
 
 function MainRouter() {
-
+    const [state, dispatch] = useReducer(themeReducer, initialState);
+    
     return (
         
             <Router>
@@ -11,7 +12,11 @@ function MainRouter() {
                     <Route path="/" element={<Login />} />
                     <Route path="/tasks" element={<Tasks />} />
                 </Routes>
+                <ThemeContext.Provider  value={{ state, dispatch }}>
+                    		<Button>Change Theme</Button>
+        	    </ThemeContext.Provider>
             </Router>
+            
         
     );
 }
